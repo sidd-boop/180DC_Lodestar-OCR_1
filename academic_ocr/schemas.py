@@ -24,8 +24,8 @@ class SubjectEntry(TypedDict):
     score: Optional[str]
     maxScore: Optional[str]
     grade: Optional[str]
-    gradingType: str
-    confidence: Optional[float]
+    #gradingType: str
+    #confidence: Optional[float]
 
 
 class AcademicRecord(TypedDict):
@@ -65,10 +65,12 @@ class DocumentExtraction(TypedDict):
         tags:           2–4 auto-generated descriptive tags.
     """
     kind: str
-    title: Optional[str]
+    '''title: Optional[str]
     exam_type: Optional[str]
     academicRecord: Optional[AcademicRecord]
     recipient: Optional[str]
     achievement: Optional[str]
     date: Optional[str]
+    tags: List[str]'''
+    academicRecord: AcademicRecord
     tags: List[str]
